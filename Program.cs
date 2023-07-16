@@ -1,43 +1,45 @@
-﻿namespace unity{
+﻿namespace grow{
 
+class flower{
 
-class Future
+public static void Main(string[]args){
+
+Console.WriteLine("Enter the number");
+
+int number=Convert.ToInt32(Console.ReadLine());
+int Reverse=0;
+
+while(number!=0)
 {
-
-public virtual int Add(int x, int y)
-{
-    int q=x+y;
-    return q ;
+    Reverse=Reverse*10;
+    Reverse=Reverse+number%10;
+    number=number/10;
 }
 
-public virtual int Add(int x,int y,int z){
-    return x+y+z;
+Console.WriteLine("reverse no is:"+Reverse);
+
 }
-
-
-static void Main(String[]args)
-{
-
-Future a=new Future();
-int result=a.Add(12,34);
-
-int result2=a.Add(23,12,12);
-
-
-Console.WriteLine("Addition of 2 number"+result);
-
-Console.WriteLine("addition of 3 number"+result2);
 
 
 }
 
 
 
-}
-// class run:Future{
-//         public override int Add(int x, int y)
-//         {
-//             return base.Add(x, y);
-//         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
